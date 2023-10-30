@@ -42,7 +42,7 @@ jobs:
         args: --acl public-read --delete
       env:
         AWS_S3_BUCKET: ${{ secrets.react-app-cicd-demo }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AKIAQF4XQVGSDVZYLW7Y }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.27Itxck3z80a+FFFjG4MK12GELCoQmjNiSwdayq3 }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AKIAQF4XQVGSFGV73CNG }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.7g7leXm453k5jf8uROUwMZq+FgOZXgzbmfKaRJPI }}
         AWS_REGION: ${{ secrets.us-west-1}}
         SOURCE_DIR: "build"
