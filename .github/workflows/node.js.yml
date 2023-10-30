@@ -35,3 +35,14 @@ jobs:
          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Deploy to the S3 server
+    - name: Deploy to S3
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.react-app-cicd-demo}}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AKIAQF4XQVGSDVZYLW7Y}}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.27Itxck3z80a+FFFjG4MK12GELCoQmjNiSwdayq3}}
+        AWS_REGION: ${{ secrets.us-west-1}}
+        SOURCE_DIR: "build"
